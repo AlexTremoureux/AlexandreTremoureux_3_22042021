@@ -1,3 +1,11 @@
+/*---------------styles.scss__by__Alex-TREMOUREUX__-----------------/*
+/*Variables*/
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-map:#dddddd;
+$color-background:#f1f1f1;
+/*------mini reset--------*/
 * {
     margin: 0rem;
     padding: 0rem;
@@ -10,13 +18,28 @@ a {
     text-decoration: none;
     color: #141414;
 }
-
+/*------Global------*/
 body{
     max-width: 768px;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+.title {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.call-to-action{
+    width: 70%;
+    max-width: 300px;
+    height: 50px;
+    background: linear-gradient($color-secondary, $color-primary);
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+/*----------Header-----------*/
 .logo{
     width: 100%;
     height: 80px;
@@ -24,7 +47,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .search-map{
     width: 100%;
     height: 50px;
@@ -32,12 +54,12 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(221, 221, 221);
-    border-top: solid 2px rgb(199, 199, 199);
+    background-color: $color-map;
+    border-top: solid 2px #c7c7c7;
     input{
         max-width: min-content;
         margin-left: 20px;
-        background-color: rgb(221, 221, 221);
+        background-color: $color-map;
         &::placeholder{
             text-align: left;
         }
@@ -49,11 +71,10 @@ body{
         margin-left: 110px;
     }
 }
-
 .header-content{
     width: 100%;
     height: 280px;
-    background-color: rgb(241, 241, 241);
+    background-color: $color-background;
     margin: auto;
     padding: 20px 0px;
     display: flex;
@@ -64,17 +85,8 @@ body{
     & h2 , p{
         width: 70%;
     }
-    & button{
-        width: 70%;
-        height: 50px;
-        background: linear-gradient(#FF79DA, #9356DC) ;
-        border-radius: 25px;
-        color: white;
-        font-weight: bold;
-        font-size: 1rem;
-    }
 }
-
+/*---------------Aside-Operation-----------------*/
 .operation{
     width: 90%;
     height: 300px;
@@ -82,31 +94,28 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
     & li{
         width: 100%;
         height: 60px;
         border: solid 1px grey;
-        background-color: rgb(241, 241, 241);
+        background-color: $color-background;
         border-radius: 25px;
-        box-shadow: 0px 6px 14px 4px rgba(221,221,221,0.75);
-        -webkit-box-shadow: 0px 6px 14px 4px rgba(221,221,221,0.75);
-        -moz-box-shadow: 0px 6px 14px 4px rgba(221,221,221,0.75);
+        box-shadow: 0px 6px 14px 4px #ddddddbf;
+        -webkit-box-shadow: 0px 6px 14px 4px #ddddddbf;
+        -moz-box-shadow: 0px 6px 14px 4px #ddddddbf;
         margin: 20px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
-
-
-.title {
-    font-size: 1.4rem;
-    font-weight: bold;
-}
+/*-------------------Main----------------------*/
 main{
-    height: 1500px;
-    background-color: rgb(241, 241, 241);
+    height: 1200px;
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 main > .title{
     padding: 30px 0px 20px 5%;
@@ -115,20 +124,17 @@ main > .title{
     width: 90%;
     height: 20%;
     margin: 0px auto 40px;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 0px 6px 14px 4px rgba(221,221,221,0.75);
-    -webkit-box-shadow: 0px 6px 14px 4px rgba(221,221,221,0.75);
-    -moz-box-shadow: 0px 6px 14px 4px rgba(221,221,221,0.75);
-
-
+    box-shadow: 0px 6px 14px 4px #ddddddbf;
+    -webkit-box-shadow: 0px 6px 14px 4px #ddddddbf;
+    -moz-box-shadow: 0px 6px 14px 4px #ddddddbf;
     &__link {
         width: 100%;
         height: 100%;
         border-radius: 15px;
         display: flex;
         flex-flow: row wrap;
-        
         &__image {
             border-radius: 15px 15px 0px 0px;
             width: 100%;
@@ -145,7 +151,6 @@ main > .title{
             &>h4{
                 font-weight: bold;
             }
-
         }
         &__favorite {
             font-size: 1rem;
@@ -155,21 +160,20 @@ main > .title{
             justify-content: right;
             align-items: center;
             &:hover{
-                color: #9356DC;
+                color: $color-primary;
             }
-
         }
     }
 }
-
+/*--------------------Footer--------------------*/
 .footer{
     width: 100%;
     height: 250px;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     &__title {
         font-size: 1.2rem;
-        margin: 1.5em 2em;
+        margin: 0em 2em 1.5em;
         padding-top: 20px;
         font-family: 'Shrikhand', cursive;
     }
@@ -181,4 +185,76 @@ main > .title{
             text-align: center;
         }
     }
+}
+/*______________----------------Pages Restaurants----------------_______________*/
+.header{
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__back{
+        position: absolute;
+        left: 5%;
+    }
+}
+.wrapper-title{
+    max-width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    &__content{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Shrikhand', cursive;
+        background-color: $color-background;
+        border-radius: 20px 20px 0px 0px;
+        text-align: center;
+        &>i{
+            margin-left: 15px;
+            &:hover{
+                flood-color: $color-primary;
+            }
+        }
+    }
+}
+.menu{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    &__title{
+        width: min-content;
+        text-transform: uppercase;
+        font-size: 1rem;
+        border-bottom: solid 2px $color-tertiary;
+        margin-bottom: 15px;
+    }
+    &__dish-list{
+        width: 100%;
+        height: 60px;
+        border-radius: 15px;
+        background-color: white;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        & > div{
+            margin: 0px 15px;
+        }
+    }
+}
+main>.call-to-action{
+    margin-bottom: 30px;
+    align-self: center;
+    
 }

@@ -1,3 +1,6 @@
+/*---------------styles.scss__by__Alex-TREMOUREUX__-----------------/*
+/*Variables*/
+/*------mini reset--------*/
 * {
   margin: 0rem;
   padding: 0rem;
@@ -13,6 +16,7 @@ a {
   color: #141414;
 }
 
+/*------Global------*/
 body {
   max-width: 768px;
   font-size: 1rem;
@@ -21,6 +25,24 @@ body {
           box-sizing: border-box;
 }
 
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.call-to-action {
+  width: 70%;
+  max-width: 300px;
+  height: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/*----------Header-----------*/
 .logo {
   width: 100%;
   height: 80px;
@@ -110,17 +132,7 @@ body {
   width: 70%;
 }
 
-.header-content button {
-  width: 70%;
-  height: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 25px;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
+/*---------------Aside-Operation-----------------*/
 .operation {
   width: 90%;
   height: 300px;
@@ -142,9 +154,9 @@ body {
   border: solid 1px grey;
   background-color: #f1f1f1;
   border-radius: 25px;
-  box-shadow: 0px 6px 14px 4px rgba(221, 221, 221, 0.75);
-  -webkit-box-shadow: 0px 6px 14px 4px rgba(221, 221, 221, 0.75);
-  -moz-box-shadow: 0px 6px 14px 4px rgba(221, 221, 221, 0.75);
+  box-shadow: 0px 6px 14px 4px #ddddddbf;
+  -webkit-box-shadow: 0px 6px 14px 4px #ddddddbf;
+  -moz-box-shadow: 0px 6px 14px 4px #ddddddbf;
   margin: 20px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,14 +169,19 @@ body {
           align-items: center;
 }
 
-.title {
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
+/*-------------------Main----------------------*/
 main {
-  height: 1500px;
+  height: 1200px;
   background-color: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 main > .title {
@@ -175,11 +192,11 @@ main > .title {
   width: 90%;
   height: 20%;
   margin: 0px auto 40px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 15px;
-  box-shadow: 0px 6px 14px 4px rgba(221, 221, 221, 0.75);
-  -webkit-box-shadow: 0px 6px 14px 4px rgba(221, 221, 221, 0.75);
-  -moz-box-shadow: 0px 6px 14px 4px rgba(221, 221, 221, 0.75);
+  box-shadow: 0px 6px 14px 4px #ddddddbf;
+  -webkit-box-shadow: 0px 6px 14px 4px #ddddddbf;
+  -moz-box-shadow: 0px 6px 14px 4px #ddddddbf;
 }
 
 .card__link {
@@ -242,16 +259,17 @@ main > .title {
   color: #9356DC;
 }
 
+/*--------------------Footer--------------------*/
 .footer {
   width: 100%;
   height: 250px;
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .footer__title {
   font-size: 1.2rem;
-  margin: 1.5em 2em;
+  margin: 0em 2em 1.5em;
   padding-top: 20px;
   font-family: 'Shrikhand', cursive;
 }
@@ -264,5 +282,123 @@ main > .title {
   display: inline-block;
   min-width: 25px;
   text-align: center;
+}
+
+/*______________----------------Pages Restaurants----------------_______________*/
+.header {
+  position: relative;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__back {
+  position: absolute;
+  left: 5%;
+}
+
+.wrapper-title {
+  max-width: 100%;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper-title__content {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Shrikhand', cursive;
+  background-color: #f1f1f1;
+  border-radius: 20px 20px 0px 0px;
+  text-align: center;
+}
+
+.wrapper-title__content > i {
+  margin-left: 15px;
+}
+
+.wrapper-title__content > i:hover {
+  flood-color: #9356DC;
+}
+
+.menu {
+  width: 95%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.menu__title {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-bottom: solid 2px #99E2D0;
+  margin-bottom: 15px;
+}
+
+.menu__dish-list {
+  width: 100%;
+  height: 60px;
+  border-radius: 15px;
+  background-color: white;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu__dish-list > div {
+  margin: 0px 15px;
+}
+
+main > .call-to-action {
+  margin-bottom: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=styles.css.map */
