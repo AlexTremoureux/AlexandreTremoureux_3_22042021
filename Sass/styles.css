@@ -1,5 +1,6 @@
 /*---------------styles.scss__by__Alex-TREMOUREUX__-----------------/*
 /*Variables*/
+/*Mixin*/
 /*------mini reset--------*/
 * {
   margin: 0rem;
@@ -18,12 +19,26 @@ a {
 
 /*------Global------*/
 body {
-  max-width: 2000px;
+  max-width: 1600px;
   margin: auto;
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse wrap;
+            flex-flow: row-reverse wrap;
+    height: 1500px;
+    background-color: #f6f6f6;
+  }
 }
 
 .title {
@@ -44,6 +59,20 @@ body {
 }
 
 /*----------Header-----------*/
+@media screen and (min-width: 1024px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    height: 255px;
+    width: 100%;
+  }
+}
+
 .logo {
   width: 100%;
   height: 80px;
@@ -56,6 +85,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 20%;
+    height: 250px;
+    background-color: white;
+  }
 }
 
 .search-map {
@@ -75,11 +112,17 @@ body {
   border-top: solid 2px #d5d5d5;
 }
 
+@media screen and (min-width: 1024px) {
+  .search-map {
+    width: 80%;
+  }
+}
+
 .search-map input {
   max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
-  margin-left: 20px;
+  margin-left: 10px;
   background-color: #eaeaea;
 }
 
@@ -104,7 +147,7 @@ body {
 }
 
 .search-map i {
-  margin-left: 110px;
+  margin-left: 100px;
 }
 
 .header-content {
@@ -127,6 +170,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .header-content {
+    width: 70%;
+    height: 160px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .header-content h2 {
@@ -161,8 +214,8 @@ body {
   background-color: #f6f6f6;
   border-radius: 25px;
   box-shadow: 0px 5px 8px 1px #e7e7e7;
-  -webkit-box-shadow: 0px 5px 7px 1px #e7e7e7;
-  -moz-box-shadow: 0px 5px 7px 1px #e7e7e7;
+  -webkit-box-shadow: 0px 5px 8px 1px #e7e7e7;
+  -moz-box-shadow: 0px 5px 8px 1px #e7e7e7;
   margin: 20px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,12 +290,31 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .operation__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .operation {
     text-align: center;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .operation {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 35%;
+    right: 10%;
+    width: 20%;
   }
 }
 
@@ -271,6 +343,18 @@ main {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  main {
+    width: 65%;
+    height: 1200px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    position: relative;
+  }
+}
+
 main > .title {
   padding: 40px 0px 20px 5%;
 }
@@ -290,8 +374,8 @@ main > .title {
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0px 5px 8px 1px #e7e7e7;
-  -webkit-box-shadow: 0px 5px 7px 1px #e7e7e7;
-  -moz-box-shadow: 0px 5px 7px 1px #e7e7e7;
+  -webkit-box-shadow: 0px 5px 8px 1px #e7e7e7;
+  -moz-box-shadow: 0px 5px 8px 1px #e7e7e7;
 }
 
 .card__link {
@@ -305,6 +389,9 @@ main > .title {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card__link__image {
@@ -338,14 +425,11 @@ main > .title {
 
 .card__link__favorite {
   font-size: 1.4rem;
-  width: 25%;
+  width: 12%;
   height: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -359,6 +443,13 @@ main > .title {
   .card {
     width: 40%;
     height: 35%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 80%;
+    height: 20%;
   }
 }
 
@@ -394,6 +485,12 @@ main > .title {
 @media screen and (min-width: 768px) {
   .footer {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,6 @@
 /*---------------styles.scss__by__Alex-TREMOUREUX__-----------------/*
 /*Variables*/
+/*Mixin*/
 /*------mini reset--------*/
 * {
   margin: 0rem;
@@ -59,9 +60,24 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.wrapper-title--alafr {
+  background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.wrapper-title--lanote {
+  background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+
+.wrapper-title--lapalette {
+  background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+
+.wrapper-title--ledelice {
+  background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
 
 .wrapper-title__content {
@@ -110,7 +126,7 @@ body {
   }
 }
 
-main {
+.main {
   height: 1200px;
   background-color: #f6f6f6;
   display: -webkit-box;
@@ -122,15 +138,38 @@ main {
           flex-direction: column;
 }
 
+.main--alafr {
+  background-color: #f6f6f6;
+  background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 @media screen and (min-width: 768px) {
-  main {
+  .main--lanote {
+    background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main--lapalette {
     background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-size: cover;
     background-position: center;
   }
 }
 
-main .call-to-action {
+@media screen and (min-width: 768px) {
+  .main--ledelice {
+    background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.main .call-to-action {
   width: 65%;
   max-width: 300px;
   height: 55px;
