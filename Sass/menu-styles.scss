@@ -1,0 +1,209 @@
+/*---------------styles.scss__by__Alex-TREMOUREUX__-----------------/*
+/*Variables*/
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-map:#eaeaea;
+$color-background:#f6f6f6;
+/*------mini reset--------*/
+* {
+    margin: 0rem;
+    padding: 0rem;
+    border: none;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #141414;
+}
+/*------Global------*/
+body{
+    max-width: 2000px;
+    margin: auto;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+/*______________----------------Pages Restaurants----------------_______________*/
+.header{
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__back{
+        position: absolute;
+        left: 5%;
+    }
+}
+.wrapper-title{
+    max-width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    &__content{
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Shrikhand', cursive;
+        background-color: $color-background;
+        border-radius: 20px 20px 0px 0px;
+        text-align: center;
+        @media screen and (min-width:768px) {
+            background: rgba( 255, 255, 255, 0.80 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            
+        }
+        &>i{
+            margin-left: 15px;
+            &:hover{
+                flood-color: $color-primary;
+            }
+        }
+    }
+    @media screen and (min-width:768px) {
+        width: 60%;
+        margin: auto;
+        background: transparent;
+        
+    }
+}
+
+main{
+    height: 1200px;
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width:768px) {
+        background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        
+    }
+
+    & .call-to-action{
+        width: 65%;
+        max-width: 300px;
+        height: 55px;
+        background: linear-gradient($color-secondary, $color-primary);
+        border-radius: 30px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1rem;
+        justify-self: center;
+    }
+}
+
+.menu{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @media screen and (min-width:768px){
+        width: 60%;
+        padding: 10px 0px;
+        background: rgba( 255, 255, 255, 0.35 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    &__title{
+        width: min-content;
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding-bottom: 5px;
+        border-bottom: 3px solid $color-tertiary ;
+        margin-bottom: 15px;
+
+        @media screen and (min-width:768px) {
+            background: rgba( 255, 255, 255, 0.35 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            width: 90px;
+            padding: 0px;
+            text-align: center;
+            align-self: center;
+        }
+        
+    }
+    &__dish-list{
+        width: 100%;
+        height: 60px;
+        border-radius: 15px;
+        background-color: #ffffff;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        & > div{
+            margin: 0px 15px;
+        }
+        @media screen and (min-width:768px) {
+            width: 90%;
+            margin: 5px auto;
+            background: rgba( 255, 255, 255, 0.35 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+    }
+}
+main>.call-to-action{
+    margin-bottom: 30px;
+    align-self: center;
+    
+}
+/*--------------------Footer--------------------*/
+.footer{
+    width: 100%;
+    height: 250px;
+    background-color: #353535;
+    color: #ffffff;
+    &__title {
+        font-size: 1.2rem;
+        margin: 0em 2em 1.5em;
+        padding-top: 20px;
+        font-family: 'Shrikhand', cursive;
+    }
+    &__link > li{
+        margin: 0.5em 2em;
+        & > i {
+            display: inline-block;
+            min-width: 25px;
+            text-align: center;
+        }
+        & > a {
+            color: #ffffff;
+        }
+    }
+    @media screen and (min-width:768px){
+        text-align:center;
+    }
+}
