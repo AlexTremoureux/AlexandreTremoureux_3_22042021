@@ -1,0 +1,11 @@
+.header{
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__back{
+        position: absolute;
+        left: 5%;
+    }
+}

@@ -1,0 +1,50 @@
+.menu{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    @media screen and (min-width:768px){
+        width: 60%;
+        padding: 10px 0px;
+        @include container-shadow;
+    }
+
+    &__title{
+        width: min-content;
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding-bottom: 5px;
+        border-bottom: 3px solid $color-tertiary ;
+        margin-bottom: 15px;
+
+        @media screen and (min-width:768px) {
+            @include container-shadow;
+            width: 90px;
+            padding: 0px;
+            text-align: center;
+            align-self: center;
+        }
+        
+    }
+    &__dish-list{
+        width: 100%;
+        height: 60px;
+        border-radius: 15px;
+        background-color: #ffffff;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        & > div{
+            margin: 0px 15px;
+        }
+        @media screen and (min-width:768px) {
+            width: 90%;
+            margin: 5px auto;
+            @include container-shadow;
+        }
+    }
+}

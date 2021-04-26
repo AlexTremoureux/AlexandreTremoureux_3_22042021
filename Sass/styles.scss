@@ -1,29 +1,15 @@
-/*---------------styles.scss__by__Alex-TREMOUREUX__-----------------/*
-/*Variables*/
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-$color-map:#eaeaea;
-$color-background:#f6f6f6;
-/*Mixin*/
-@mixin button-shadow {
-    box-shadow: 0px 5px 8px 1px #e7e7e7;
-    -webkit-box-shadow: 0px 5px 8px 1px #e7e7e7;
-    -moz-box-shadow: 0px 5px 8px 1px #e7e7e7;
-}
-/*------mini reset--------*/
-* {
-    margin: 0rem;
-    padding: 0rem;
-    border: none;
-}
-ul {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-    color: #141414;
-}
+/*---------------styles.scss__by__Alex-TREMOUREUX__-----------------*/
+
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./layout/mini-reset";
+@import "./layout/home-header";
+@import "./layout/operations";
+@import "./layout/card";
+@import "./layout/footer";
+
+
 /*------Global------*/
 body{
     max-width: 1600px;
@@ -43,160 +29,7 @@ body{
     font-weight: bold;
 }
 .call-to-action{
-    width: 65%;
-    max-width: 300px;
-    height: 55px;
-    background: linear-gradient($color-secondary, $color-primary);
-    border-radius: 30px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 1rem;
-}
-/*----------Header-----------*/
-header{
-    @media screen and (min-width: 1024px) {
-        display: flex;
-        flex-flow: column wrap;
-        height: 255px;
-        width: 100%;
-    }
-}
-.logo{
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media screen and (min-width: 1024px) {
-        width: 20%;
-        height: 250px;
-        background-color: white;
-    }
-}
-.search-map{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: $color-map;
-    border-top: solid 2px #d5d5d5;
-    @media screen and (min-width: 1024px) {
-        width: 80%;
-    }
-    & input{
-        max-width: min-content;
-        margin-left: 10px;
-        background-color: $color-map;
-        &::placeholder{
-            text-align: left;
-        }
-        &:focus{
-            outline-style: none;
-        }
-    }
-    & i {
-        margin-left: 100px;
-    }
-}
-.header-content{
-    width: 100%;
-    height: 280px;
-    background-color: $color-background;
-    margin: auto;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    @media screen and (min-width: 1024px) {
-        width: 70%;
-        height: 160px;
-        justify-content: space-between;
-    }
-    & h2 {
-        width: 70%;
-    }
-    & p{
-        font-size: 1.2rem;
-        width: 90%;
-    }
-}
-/*---------------Aside-Operation-----------------*/
-.operation{
-    width: 90%;
-    height: 350px;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    &__list li{
-        position: relative;
-        width: 100%;
-        height: 75px;
-        background-color: $color-background;
-        border-radius: 25px;
-        @include button-shadow;
-        margin: 20px 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        & > p {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            left: -12px;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background-color: $color-primary;
-            color: #ffffff;
-        }
-        & > i {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            height: 20px;
-            left: 10%;
-            font-size: 1.2rem;
-            color: #808080;
-        }
-        & > b{
-            max-width: 60%;
-            text-align: center;
-        }
-    }
-    &__list--active .active{
-        color: $color-primary;
-    }
-    & .--background {
-        background-color: #f5edff;
-    }
-    &__list{
-        @media screen and (min-width:768px) {
-            display: flex;
-            flex-flow: row nowrap; 
-        }
-        @media screen and (min-width:1024px) {
-            flex-flow: column nowrap;
-        }
-    }
-    @media screen and (min-width:768px) {
-        text-align: center;
-        height: max-content;
-        
-    }
-    @media screen and (min-width:1024px) {
-        position: sticky;
-        top: 35%;
-        right: 10%;
-        width: 20%;    
-    }
+    @include call-to-action ;
 }
 /*-------------------Main----------------------*/
 main{
@@ -222,87 +55,5 @@ main > .title{
         text-align: center;
         width: 100%;
         padding: 40px;
-    }
-}
-.card{
-    width: 90%;
-    height: 20%;
-    margin: 0px auto 40px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    @include button-shadow;
-    &__link {
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        &__image {
-            border-radius: 15px 15px 0px 0px;
-            width: 100%;
-            height: 70%;
-            object-fit: cover;
-        }
-        &__content{
-            height: 30%;
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            padding-left: 20px;
-            &>h4{
-                font-weight: bold;
-                font-size: 1.2rem;
-            }
-        }
-        &__favorite {
-            font-size: 1.4rem;
-            width: 12%;
-            height: 30%;
-            display: flex;
-            align-items: center;
-            &:hover{
-                color: $color-primary;
-            }
-        }
-    }
-    @media screen and (min-width:768px) {
-        width: 40%;
-        height: 35%;
-    }
-    @media screen and (min-width:1024px) {
-        width: 80%;
-        height: 20%;
-    }
-}
-/*--------------------Footer--------------------*/
-.footer{
-    width: 100%;
-    height: 250px;
-    background-color: #353535;
-    color: #ffffff;
-    &__title {
-        font-size: 1.2rem;
-        margin: 0em 2em 1.5em;
-        padding-top: 20px;
-        font-family: 'Shrikhand', cursive;
-    }
-    &__link > li{
-        margin: 0.5em 2em;
-        & > i {
-            display: inline-block;
-            min-width: 25px;
-            text-align: center;
-        }
-        & > a {
-            color: #ffffff;
-        }
-    }
-    @media screen and (min-width:768px){
-        text-align:center;
-    }
-    @media screen and (min-width:1024px) {
-        width: 100%;
     }
 }
