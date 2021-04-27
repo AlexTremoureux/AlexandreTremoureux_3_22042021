@@ -1,10 +1,13 @@
 /*----------Header-----------*/
 header{
     @media screen and (min-width: 1024px) {
+        position: fixed;
+        z-index: 10;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column-reverse wrap;
         height: 255px;
         width: 100%;
+        background: conic-gradient(from 300deg at 0% 60%, #9356dc, #9657dc, #9f58dc, #ab5adc, #b95edc, #c862dc, #d666db, #e46cdb, #ef71db, #f775da, #fd78da, #ff79da);
     }
 }
 .logo{
@@ -14,7 +17,8 @@ header{
     @media screen and (min-width: 1024px) {
         width: 20%;
         height: 250px;
-        background-color: white;
+        text-align: left;
+        background: transparent;
     }
 }
 .search-map{
@@ -25,14 +29,28 @@ header{
     background-color: $color-map;
     border-top: solid 2px #d5d5d5;
     @media screen and (min-width: 1024px) {
+        
+        border-top: none;
         width: 80%;
+        background-color: transparent;
     }
     & input{
-        max-width: min-content;
+        width: min-content;
         margin-left: 10px;
-        background-color: $color-map;
+        background-color: transparent;
+        @media screen and (min-width:1024px) {
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            width: 50%;
+            text-align: center;
+        }
         &::placeholder{
             text-align: left;
+            @media screen and (min-width:1024px) {
+                text-align: center;
+            }
         }
         &:focus{
             outline-style: none;
@@ -40,6 +58,10 @@ header{
     }
     & i {
         margin-left: 100px;
+        @media screen and (min-width:1024px) {
+            position: absolute;
+            left: 40%;
+        }
     }
 }
 .header-content{
@@ -54,9 +76,10 @@ header{
     align-items: center;
     text-align: center;
     @media screen and (min-width: 1024px) {
-        width: 70%;
+        width: 80%;
         height: 160px;
         justify-content: space-between;
+        background: transparent;
     }
     & h2 {
         width: 70%;
