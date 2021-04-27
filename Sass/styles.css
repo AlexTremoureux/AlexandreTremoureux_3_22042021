@@ -21,6 +21,7 @@ a {
 @media screen and (min-width: 1024px) {
   header {
     position: fixed;
+    max-width: 2000px;
     z-index: 10;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -228,6 +229,15 @@ a {
           align-items: center;
 }
 
+@media screen and (min-width: 1024px) {
+  .operation__list li {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #dddddd, #ffffff);
+    -webkit-box-shadow: 9px 9px 17px #a5a5a5, -9px -9px 17px #ffffff;
+            box-shadow: 9px 9px 17px #a5a5a5, -9px -9px 17px #ffffff;
+  }
+}
+
 .operation__list li > p {
   position: absolute;
   display: -webkit-box;
@@ -351,6 +361,18 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
+    padding: 10px;
+    border-radius: 15px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #dddddd);
+    -webkit-box-shadow: 9px 9px 17px #a5a5a5, -9px -9px 17px #ffffff;
+            box-shadow: 9px 9px 17px #a5a5a5, -9px -9px 17px #ffffff;
+  }
+  .card__link:hover {
+    border-radius: 15px;
+    background: #f6f6f6;
+    -webkit-box-shadow: inset 9px 9px 17px #a5a5a5, inset -9px -9px 17px #ffffff;
+            box-shadow: inset 9px 9px 17px #a5a5a5, inset -9px -9px 17px #ffffff;
   }
 }
 
@@ -452,7 +474,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .footer {
-    height: 100px;
+    height: 120px;
   }
 }
 
@@ -502,7 +524,7 @@ a {
 
 /*------Global------*/
 body {
-  max-width: 1600px;
+  max-width: 2000px;
   margin: auto;
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
@@ -519,8 +541,10 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-flow: row-reverse wrap;
             flex-flow: row-reverse wrap;
-    height: 1500px;
+    height: 1600px;
     background-color: #f6f6f6;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
   }
 }
 

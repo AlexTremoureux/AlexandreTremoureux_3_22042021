@@ -15,6 +15,11 @@
         @include button-shadow;
         margin: 20px 0px;
         @include flex-center;
+        @media screen and (min-width:1024px) {
+            border-radius: 15px;
+            background: linear-gradient(145deg, #dddddd, #ffffff);
+            box-shadow:  9px 9px 17px #a5a5a5, -9px -9px 17px #ffffff;
+        }
         & > p {
             position: absolute;
             @include flex-center;
