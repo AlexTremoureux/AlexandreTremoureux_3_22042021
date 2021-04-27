@@ -4,26 +4,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-size: cover;
-    background-position: center;
-    &--alafr{
-        background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-    }
-    &--lanote{
-        background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-    }
-    &--lapalette{
-        background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    }
-    &--ledelice{
-        background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-    }
+    @include background-image(alafr);
     &__content{
         height: 50px;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         font-family: 'Shrikhand', cursive;
         background-color: $color-background;
         border-radius: 20px 20px 0px 0px;
@@ -35,7 +20,6 @@
             -webkit-backdrop-filter: blur( 4px );
             border-radius: 10px;
             border: 1px solid rgba( 255, 255, 255, 0.18 );
-            
         }
         &>i{
             margin-left: 15px;
@@ -48,6 +32,5 @@
         width: 60%;
         margin: auto;
         background: transparent;
-        
     }
 }

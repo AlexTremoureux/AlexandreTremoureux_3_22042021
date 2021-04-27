@@ -14,14 +14,10 @@
         border-radius: 25px;
         @include button-shadow;
         margin: 20px 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         & > p {
             position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center;
             left: -12px;
             width: 25px;
             height: 25px;
@@ -31,9 +27,7 @@
         }
         & > i {
             position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-center;
             width: 20px;
             height: 20px;
             left: 10%;

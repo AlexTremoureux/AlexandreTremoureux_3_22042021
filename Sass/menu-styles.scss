@@ -7,7 +7,6 @@
 @import "./layout/wrapper-title";
 @import "./layout/menu";
 @import "./layout/footer";
-
 /*------Global------*/
 body{
     max-width: 2000px;
@@ -16,49 +15,18 @@ body{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-
 /*______________----------------Pages Restaurants----------------_______________*/
-
 .main{
     height: 1200px;
     background-color: $color-background;
     display: flex;
     flex-direction: column;
-    
-    &--alafr{
-        background-color: $color-background;
-        @media screen and (min-width:768px) {
-        }
-        background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-    &--lanote{
-        @media screen and (min-width:768px) {
-            background-image: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-            background-size: cover;
-            background-position: center;
-        }
-    }
-    &--lapalette{
-        @media screen and (min-width:768px) {
-            background-image: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-            background-size: cover;
-            background-position: center;
-        }
-    }
-    &--ledelice{
-        @media screen and (min-width:768px) {
-            background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-            background-size: cover;
-            background-position: center;
-        }
+    @media screen and (min-width:768px) {
+        @include background-image(alafr);
     }
 }
-
 main>.call-to-action{
     margin-bottom: 30px;
     align-self: center;
     @include call-to-action;
-    
 }

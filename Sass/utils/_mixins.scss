@@ -1,4 +1,9 @@
 /*Mixin*/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @mixin container-shadow {
     background: rgba( 255, 255, 255, 0.35 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -23,14 +28,18 @@
     font-size: 1rem;
     justify-self: center;
 }
-@mixin background-image($img){
-    background-image: url($img);
-    background-size: cover;
-    background-position: center;
-}
-$menu: (
-    "alafr": '/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg',
-    "lanote": 'images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg',
-    "lapalette": '/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg',
-    "ledelice": '/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg'
+$menu:(
+    alafr: '/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg',
+    lanote: '/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg',
+    lapalette: "/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+    ledelice: "/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
 );
+@mixin background-image($selector){
+    @each $selector, $img in $menu {
+        &--#{$selector}{
+            background-image: url($img);
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}

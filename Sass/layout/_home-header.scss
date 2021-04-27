@@ -10,9 +10,7 @@ header{
 .logo{
     width: 100%;
     height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     @media screen and (min-width: 1024px) {
         width: 20%;
         height: 250px;
@@ -22,9 +20,7 @@ header{
 .search-map{
     width: 100%;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     text-align: center;
     background-color: $color-map;
     border-top: solid 2px #d5d5d5;
