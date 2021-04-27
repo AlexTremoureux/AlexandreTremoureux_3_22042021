@@ -29,4 +29,30 @@ main>.call-to-action{
     margin-bottom: 30px;
     align-self: center;
     @include call-to-action;
+    @media screen and (min-width:768px) {
+        position: sticky;
+        bottom: 45px;
+    }
+}
+
+
+.vignets {
+    animation-duration: 2s;
+  animation-name: transition;
+}
+@keyframes transition {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes transition { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
