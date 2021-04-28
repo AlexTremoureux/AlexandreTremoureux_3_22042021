@@ -1,0 +1,47 @@
+/*---------___________-------////!!!-spinner-!!!\\\\-------________-----------*/
+.container-spinner{
+    font-family: 'Shrikhand', cursive;
+    position: absolute;
+    @include flex-center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: $color-primary;
+    animation: spinner 2s linear 1 normal forwards;
+    & > p {
+        position: fixed;
+        top: 25%;
+        font-size: 4rem;
+        color: $color-tertiary;
+    }
+}
+@keyframes spinner {
+    0%{ display: flex; opacity: 1; z-index: 20; }
+    60%{ opacity: 1; }
+    99%{ z-index: 20; }
+    100%{ opacity: 0; z-index: -20;}
+}
+.loader-spinner {
+    color: $color-tertiary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .loader-spinner:after {
+    animation: loading .8s linear infinite;
+    display: block;
+    content: "⠋";
+    font-size: 80px;
+  }
+  @keyframes loading {
+    10% { content: "⠙"; }
+    20% { content: "⠹"; }
+    30% { content: "⠸"; }
+    40% { content: "⠼"; }
+    50% { content: "⠴"; }
+    60% { content: "⠦"; }
+    70% { content: "⠧"; }
+    80% { content: "⠇"; }
+    90% { content: "⠏"; }
+  }

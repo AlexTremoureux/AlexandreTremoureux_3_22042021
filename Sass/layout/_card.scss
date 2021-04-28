@@ -61,9 +61,7 @@
             width: 12%;
             height: 30%;
             @include flex-center;
-            &:hover{
-                color: $color-primary;
-            }
+            @include favorite;
             @media screen and (min-width:1024px) {
                 text-align: left;
                 width: 30%;
