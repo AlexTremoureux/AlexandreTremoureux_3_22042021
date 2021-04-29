@@ -134,6 +134,7 @@ a {
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: #d5f3eb;
   }
 }
 
@@ -201,6 +202,7 @@ a {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    background-color: #c1ede2;
   }
 }
 
@@ -220,6 +222,9 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   cursor: pointer;
+  box-shadow: 0px 5px 8px 1px #e7e7e7;
+  -webkit-box-shadow: 0px 5px 8px 1px #e7e7e7;
+  -moz-box-shadow: 0px 5px 8px 1px #e7e7e7;
 }
 
 .menu__dish-list > div {

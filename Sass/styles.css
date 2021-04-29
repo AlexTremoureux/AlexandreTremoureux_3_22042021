@@ -508,6 +508,11 @@ a {
           justify-content: space-between;
 }
 
+.card__link:hover {
+  -webkit-box-shadow: 9px 9px 17px #a5a5a5;
+          box-shadow: 9px 9px 17px #a5a5a5;
+}
+
 @media screen and (min-width: 1024px) {
   .card__link {
     -webkit-box-orient: vertical;
@@ -515,7 +520,6 @@ a {
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
     padding: 10px;
-    border-radius: 15px;
     border-radius: 15px;
     background: linear-gradient(145deg, #ffffff, #dddddd);
     -webkit-box-shadow: 9px 9px 17px #a5a5a5, -9px -9px 17px #ffffff;

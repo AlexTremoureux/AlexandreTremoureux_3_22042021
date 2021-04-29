@@ -25,6 +25,7 @@
             padding: 0px;
             text-align: center;
             align-self: center;
+            background-color: lighten($color-tertiary, $amount: 10%);
         }
         
     }
@@ -38,6 +39,7 @@
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+        @include button-shadow;
         & > div{
             margin: 0px 15px;
         }

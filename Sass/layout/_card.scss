@@ -12,10 +12,13 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+        &:hover{
+            box-shadow:  9px 9px 17px #a5a5a5;
+            
+        }
         @media screen and (min-width:1024px) {
             flex-flow: column wrap;
             padding: 10px;
-            border-radius: 15px;
             border-radius: 15px;
             background: linear-gradient(145deg, #ffffff, #dddddd);
             box-shadow:  9px 9px 17px #a5a5a5,
