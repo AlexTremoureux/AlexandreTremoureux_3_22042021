@@ -568,7 +568,9 @@ a {
 
 @media screen and (min-width: 1024px) {
   .card__link__content {
-    text-align: left;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 0px;
     width: 30%;
     height: 50%;
     -ms-flex-pack: distribute;
@@ -594,13 +596,14 @@ a {
 .card__link__favorite .fas {
   position: absolute;
   opacity: 0;
-  -webkit-transition: color 2s linear;
-  transition: color 2s linear;
-  color: white;
+  -webkit-transition: color 0.6s linear;
+  transition: color 0.6s linear;
+  color: transparent;
 }
 
 .card__link__favorite:hover .far {
   opacity: 0;
+  color: #9356DC;
 }
 
 .card__link__favorite:hover .fas {
@@ -610,9 +613,14 @@ a {
 
 @media screen and (min-width: 1024px) {
   .card__link__favorite {
-    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     width: 30%;
-    height: 50%;
+    height: 30%;
   }
 }
 
@@ -732,6 +740,16 @@ body {
   -ms-grid-column-align: center;
       justify-self: center;
   cursor: pointer;
+  -webkit-box-shadow: #9356DC 2px 2px 8px 2px;
+          box-shadow: #9356DC 2px 2px 8px 2px;
+}
+
+.call-to-action:hover {
+  -webkit-box-shadow: #9356DC 1px 1px 20px 2px;
+          box-shadow: #9356DC 1px 1px 20px 2px;
+  color: #99E2D0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
+  background: linear-gradient(#ff93e1, #a16be0);
 }
 
 /*-------------------Main----------------------*/

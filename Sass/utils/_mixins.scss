@@ -28,18 +28,26 @@
     font-size: 1rem;
     justify-self: center;
     cursor: pointer;
+    box-shadow: $color-primary 2px 2px 8px 2px;
+    &:hover{
+        box-shadow: $color-primary 1px 1px 20px 2px;
+        color: $color-tertiary;
+        background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%))  ;
+    }
 }
+
 @mixin favorite {
     .fas{
         position: absolute;
         opacity: 0;
-        transition: color 2s linear;
-        color: white;
+        transition: color 0.6s linear;
+        color: transparent;
     }
     &:hover{
         
         & .far{   
             opacity: 0;
+            color: $color-primary;
         }
         & .fas{   
             opacity: 1; 

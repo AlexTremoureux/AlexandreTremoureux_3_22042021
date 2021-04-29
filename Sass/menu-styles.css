@@ -110,13 +110,14 @@ a {
 .wrapper-title__content > .favorite .fas {
   position: absolute;
   opacity: 0;
-  -webkit-transition: color 2s linear;
-  transition: color 2s linear;
-  color: white;
+  -webkit-transition: color 0.6s linear;
+  transition: color 0.6s linear;
+  color: transparent;
 }
 
 .wrapper-title__content > .favorite:hover .far {
   opacity: 0;
+  color: #9356DC;
 }
 
 .wrapper-title__content > .favorite:hover .fas {
@@ -360,6 +361,16 @@ main > .call-to-action {
   -ms-grid-column-align: center;
       justify-self: center;
   cursor: pointer;
+  -webkit-box-shadow: #9356DC 2px 2px 8px 2px;
+          box-shadow: #9356DC 2px 2px 8px 2px;
+}
+
+main > .call-to-action:hover {
+  -webkit-box-shadow: #9356DC 1px 1px 20px 2px;
+          box-shadow: #9356DC 1px 1px 20px 2px;
+  color: #99E2D0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
+  background: linear-gradient(#ff93e1, #a16be0);
 }
 
 @media screen and (min-width: 768px) {
