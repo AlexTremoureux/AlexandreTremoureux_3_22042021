@@ -48,5 +48,28 @@
             margin: 5px auto;
             @include container-shadow;
         }
+        .coche{
+            @include flex-center;
+        }
+        .price{
+            height: 60px;
+            width: 60px;
+            @include flex-center;
+            transition: transform 1s ease-in-out;
+        }
+        .check{
+            background-color: green;
+            width: 0px;
+            height: 60px;
+            display: block;
+        }
+        .price:hover {
+            transform: translate(-60px, 0px);
+            .check{
+                width: 60px;
+                transform: translate(-60px, 0px);
+            }
+        }
+        
     }
 }

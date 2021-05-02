@@ -1,7 +1,7 @@
 /*---------___________-------////!!!-spinner-!!!\\\\-------________-----------*/
 .container-spinner{
     font-family: 'Shrikhand', cursive;
-    position: absolute;
+    position: fixed;
     @include flex-center;
     flex-direction: column;
     height: 100%;
