@@ -18,6 +18,7 @@ header{
     @media screen and (min-width: 1024px) {
         width: 20%;
         height: 250px;
+        padding-left: 80px;
         text-align: left;
         background: transparent;
     }
@@ -42,31 +43,30 @@ form{
         background-color: transparent;
     }
     & label {
+        position: relative;
         @include flex-center;
         width: 100%;
-        & i::after {
-            content: "";
+        & i{
+            position: absolute;
+            right: 70%;
             @media screen and (min-width:1024px) {
                 position: absolute;
-                left: 58%;
+                right: 70%;
             }
         }
         & input{
             width: 100%;
             background-color: transparent;
+            text-align: center;
             @media screen and (min-width:1024px) {
                 background: rgba( 255, 255, 255, 0.25 );
                 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
                 border-radius: 10px;
                 border: 1px solid rgba( 255, 255, 255, 0.18 );
                 width: 50%;
-                text-align: center;
             }
             &::placeholder{
                 text-align: center;
-                @media screen and (min-width:1024px) {
-                    text-align: center;
-                }
             }
             &:focus{
                 outline-style: none;

@@ -207,6 +207,7 @@ a {
   .logo {
     width: 20%;
     height: 250px;
+    padding-left: 80px;
     text-align: left;
     background: transparent;
   }
@@ -253,6 +254,7 @@ a {
 }
 
 .search-map label {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,20 +267,22 @@ a {
   width: 100%;
 }
 
-.search-map label i::after {
-  content: "";
+.search-map label i {
+  position: absolute;
+  right: 70%;
 }
 
 @media screen and (min-width: 1024px) {
-  .search-map label i::after {
+  .search-map label i {
     position: absolute;
-    left: 58%;
+    right: 70%;
   }
 }
 
 .search-map label input {
   width: 100%;
   background-color: transparent;
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -289,7 +293,6 @@ a {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     width: 50%;
-    text-align: center;
   }
 }
 
@@ -307,21 +310,6 @@ a {
 
 .search-map label input::placeholder {
   text-align: center;
-}
-
-@media screen and (min-width: 1024px) {
-  .search-map label input::-webkit-input-placeholder {
-    text-align: center;
-  }
-  .search-map label input:-ms-input-placeholder {
-    text-align: center;
-  }
-  .search-map label input::-ms-input-placeholder {
-    text-align: center;
-  }
-  .search-map label input::placeholder {
-    text-align: center;
-  }
 }
 
 .search-map label input:focus {
@@ -626,14 +614,9 @@ a {
 .card__link__favorite .fas {
   position: absolute;
   opacity: 0;
-  -webkit-transition: color 0.6s linear;
-  transition: color 0.6s linear;
+  -webkit-transition: color .6s linear;
+  transition: color .6s linear;
   color: transparent;
-}
-
-.card__link__favorite:hover .far {
-  opacity: 0;
-  color: #9356DC;
 }
 
 .card__link__favorite:hover .fas {

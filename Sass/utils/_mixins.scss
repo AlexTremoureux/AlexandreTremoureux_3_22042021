@@ -39,14 +39,10 @@
     .fas{
         position: absolute;
         opacity: 0;
-        transition: color 0.6s linear;
+        transition: color .6s linear;
         color: transparent;
     }
     &:hover{
-        & .far{   
-            opacity: 0;
-            color: $color-primary;
-        }
         & .fas{   
             opacity: 1; 
             color: $color-primary;
