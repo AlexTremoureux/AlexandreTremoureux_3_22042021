@@ -20,16 +20,20 @@
         <header>
             <h1 class="logo"><img src="./images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood"></h1>
             <!--Input-->
-            <div class="search-map">
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="search" placeholder="Paris, Belleville">
-            </div>
-            <!--Titre + Call to Action-->
-            <div class="header-content">
-                <h2 class="title">Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button class="call-to-action">Explorer nos restaurants</button>
-            </div>
+            <form action="#">
+                <div class="search-map">
+                    <label for="search">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input id="search" type="search" required placeholder="Paris, Belleville">
+                    </label>
+                </div> 
+                <!--Titre + Call to Action-->
+                <div class="header-content">
+                    <h2 class="title">Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                    <button class="call-to-action" type="submit">Explorer nos restaurants</button>
+                </div>
+            </form>
         </header>
         <!--Fonctionnement-->
         <aside class="operation">
