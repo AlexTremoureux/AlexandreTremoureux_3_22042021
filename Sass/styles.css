@@ -252,14 +252,37 @@ a {
   }
 }
 
-.search-map input {
+.search-map label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  margin-left: 10px;
+}
+
+.search-map label i::after {
+  content: "";
+}
+
+@media screen and (min-width: 1024px) {
+  .search-map label i::after {
+    position: absolute;
+    left: 58%;
+  }
+}
+
+.search-map label input {
+  width: 100%;
   background-color: transparent;
 }
 
 @media screen and (min-width: 1024px) {
-  .search-map input {
+  .search-map label input {
     background: rgba(255, 255, 255, 0.25);
     -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -270,50 +293,39 @@ a {
   }
 }
 
-.search-map input::-webkit-input-placeholder {
-  text-align: left;
+.search-map label input::-webkit-input-placeholder {
+  text-align: center;
 }
 
-.search-map input:-ms-input-placeholder {
-  text-align: left;
+.search-map label input:-ms-input-placeholder {
+  text-align: center;
 }
 
-.search-map input::-ms-input-placeholder {
-  text-align: left;
+.search-map label input::-ms-input-placeholder {
+  text-align: center;
 }
 
-.search-map input::placeholder {
-  text-align: left;
+.search-map label input::placeholder {
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
-  .search-map input::-webkit-input-placeholder {
+  .search-map label input::-webkit-input-placeholder {
     text-align: center;
   }
-  .search-map input:-ms-input-placeholder {
+  .search-map label input:-ms-input-placeholder {
     text-align: center;
   }
-  .search-map input::-ms-input-placeholder {
+  .search-map label input::-ms-input-placeholder {
     text-align: center;
   }
-  .search-map input::placeholder {
+  .search-map label input::placeholder {
     text-align: center;
   }
 }
 
-.search-map input:focus {
+.search-map label input:focus {
   outline-style: none;
-}
-
-.search-map i {
-  margin-left: 100px;
-}
-
-@media screen and (min-width: 1024px) {
-  .search-map i {
-    position: absolute;
-    left: 58%;
-  }
 }
 
 .header-content {
