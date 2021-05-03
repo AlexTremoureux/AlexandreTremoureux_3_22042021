@@ -52,25 +52,25 @@ a {
 }
 
 .wrapper-title--alafr {
-  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("/images/restaurants/toa-heftiba.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper-title--lanote {
-  background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("/images/restaurants/stil.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper-title--lapalette {
-  background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("/images/restaurants/jay-wennington.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper-title--ledelice {
-  background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("/images/restaurants/louis-hansel.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -110,14 +110,20 @@ a {
 .wrapper-title__content > .favorite .fas {
   position: absolute;
   opacity: 0;
-  -webkit-transition: color .6s linear;
-  transition: color .6s linear;
+  -webkit-transition: all .6s linear;
+  transition: all .6s linear;
   color: transparent;
 }
 
 .wrapper-title__content > .favorite:hover .fas {
   opacity: 1;
-  color: #9356DC;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+}
+
+.wrapper-title__content > .favorite:hover .far {
+  opacity: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -160,6 +166,7 @@ a {
 @media screen and (min-width: 768px) {
   .menu {
     width: 60%;
+    max-width: 800px;
     padding: 10px 0px;
     background: rgba(255, 255, 255, 0.35);
     -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -172,9 +179,7 @@ a {
 }
 
 .menu__title {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  width: 40px;
   text-transform: uppercase;
   font-size: 1rem;
   padding-bottom: 5px;
@@ -240,20 +245,8 @@ a {
   }
 }
 
-.menu__dish-list .coche {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .menu__dish-list .price {
-  height: 60px;
+  height: 100%;
   width: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,22 +263,18 @@ a {
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
-.menu__dish-list .check {
-  background-color: green;
-  width: 0px;
-  height: 60px;
-  display: block;
-}
-
 .menu__dish-list .price:hover {
   -webkit-transform: translate(-60px, 0px);
           transform: translate(-60px, 0px);
 }
 
-.menu__dish-list .price:hover .check {
-  width: 60px;
-  -webkit-transform: translate(-60px, 0px);
-          transform: translate(-60px, 0px);
+.menu__dish-list .price:hover ::after {
+  content: "v";
+  color: white;
+  border: solid 1px black;
+  height: 100%;
+  width: 100%;
+  background-color: #99E2D0;
 }
 
 /*--------------------Footer--------------------*/
@@ -371,22 +360,22 @@ body {
 
 @media screen and (min-width: 768px) {
   .main--alafr {
-    background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-image: url("/images/restaurants/toa-heftiba.jpg");
     background-size: cover;
     background-position: center;
   }
   .main--lanote {
-    background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background-image: url("/images/restaurants/stil.jpg");
     background-size: cover;
     background-position: center;
   }
   .main--lapalette {
-    background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-image: url("/images/restaurants/jay-wennington.jpg");
     background-size: cover;
     background-position: center;
   }
   .main--ledelice {
-    background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-image: url("/images/restaurants/louis-hansel.jpg");
     background-size: cover;
     background-position: center;
   }
