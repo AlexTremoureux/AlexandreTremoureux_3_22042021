@@ -198,9 +198,12 @@ a {
   .logo {
     width: 20%;
     height: 250px;
-    padding-left: 80px;
+    padding-left: 150px;
     text-align: left;
     background: transparent;
+  }
+  .logo img {
+    width: 100%;
   }
 }
 
@@ -256,10 +259,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-}
-
-.search-map label:checked i {
-  display: none;
+  height: 60%;
 }
 
 .search-map label i {
@@ -270,12 +270,13 @@ a {
 @media screen and (min-width: 1024px) {
   .search-map label i {
     position: absolute;
-    right: 70%;
+    right: 57%;
   }
 }
 
 .search-map label input {
   width: 100%;
+  height: 100%;
   background-color: transparent;
   text-align: center;
 }
@@ -309,6 +310,8 @@ a {
 
 .search-map label input:focus {
   outline-style: none;
+  background: white;
+  z-index: 2;
 }
 
 .header-content {

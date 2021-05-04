@@ -425,10 +425,28 @@ main > .call-to-action:hover {
 }
 
 .vignets {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-name: transition;
-          animation-name: transition;
+  -webkit-animation: transition 1s linear 0s 1 normal both;
+          animation: transition 1s linear 0s 1 normal both;
+}
+
+.vignets:nth-child(2) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.vignets:nth-child(3) {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.vignets:nth-child(4) {
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+
+.vignets__list {
+  -webkit-animation: transition 1s linear 0s 1 normal both;
+          animation: transition 1s linear 0s 1 normal both;
 }
 
 @-webkit-keyframes transition {
