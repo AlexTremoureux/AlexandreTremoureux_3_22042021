@@ -53,9 +53,10 @@ form{
         & i{
             position: absolute;
             right: 70%;
+            color: #646464;
             @media screen and (min-width:1024px) {
                 position: absolute;
-                right: 57%;
+                right: 59%;
             }
         }
         & input{

@@ -265,12 +265,13 @@ a {
 .search-map label i {
   position: absolute;
   right: 70%;
+  color: #646464;
 }
 
 @media screen and (min-width: 1024px) {
   .search-map label i {
     position: absolute;
-    right: 57%;
+    right: 59%;
   }
 }
 

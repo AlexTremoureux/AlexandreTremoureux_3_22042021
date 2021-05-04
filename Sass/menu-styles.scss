@@ -35,20 +35,21 @@ main>.call-to-action{
     }
 }
 .vignets{
-    animation: transition 1s linear 0s 1 normal both;
-}
-@for $i from 2 to 5 {
-    .vignets{
-        &:nth-child(#{$i}){
-            animation-delay: .8s*$i;
+    animation: transition 2s linear 1 normal both;
+    @for $i from 1 through 3 {
+        &--#{$i}{
+            animation-delay: .5s*$i;
         }
     }
 }
 .vignets__list{
-    animation: transition 1s linear 0s 1 normal both;
+    animation: transition .4s linear 1 normal both;
+    @for $i from 1 through 9 {
+        &--#{$i}{
+            animation-delay: .4s*$i;
+        }
+    }
 }
-
-
 @keyframes transition {
     from {
         opacity:0;

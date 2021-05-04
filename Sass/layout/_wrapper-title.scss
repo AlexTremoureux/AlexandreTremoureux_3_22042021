@@ -6,8 +6,8 @@
     justify-content: flex-end;
     @include background-image(alafr);
     &__content{
-        height: 50px;
-        width: 100%;
+        max-height: 80px;
+        max-width: 100%;
         @include flex-center;
         font-family: 'Shrikhand', cursive;
         background-color: $color-background;
