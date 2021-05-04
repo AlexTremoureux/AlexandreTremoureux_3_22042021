@@ -46,6 +46,11 @@ form{
         position: relative;
         @include flex-center;
         width: 100%;
+        &:checked{
+            i{
+                display: none;
+            }
+        }
         & i{
             position: absolute;
             right: 70%;

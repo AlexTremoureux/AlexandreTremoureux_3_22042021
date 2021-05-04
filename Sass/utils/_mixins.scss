@@ -39,14 +39,18 @@
     .fas{
         position: absolute;
         opacity: 0;
-        transition:all .6s linear;
+        transition: all .6s linear;
         color: transparent;
+    }
+    .far{
+        transition: all 1s linear;
     }
     &:hover{
         .fas{
             opacity: 1; 
             background: linear-gradient($color-primary, $color-secondary);
             background-clip: text;
+            -webkit-background-clip: text;
         }
         .far{
             opacity: 0;
@@ -54,10 +58,10 @@
     }
 }
 $menu:(
-    alafr: '/images/restaurants/toa-heftiba.jpg',
-    lanote: '/images/restaurants/stil.jpg',
-    lapalette: '/images/restaurants/jay-wennington.jpg',
-    ledelice: '/images/restaurants/louis-hansel.jpg'
+    alafr: '/../../images/restaurants/toa-heftiba.jpg',
+    lanote: '/../../images/restaurants/stil.jpg',
+    lapalette: '/../../images/restaurants/jay-wennington.jpg',
+    ledelice: '/../../images/restaurants/louis-hansel.jpg'
 );
 @mixin background-image($selector){
     @each $selector, $img in $menu {

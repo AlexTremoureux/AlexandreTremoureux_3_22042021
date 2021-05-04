@@ -52,25 +52,25 @@ a {
 }
 
 .wrapper-title--alafr {
-  background-image: url("/images/restaurants/toa-heftiba.jpg");
+  background-image: url("/../../images/restaurants/toa-heftiba.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper-title--lanote {
-  background-image: url("/images/restaurants/stil.jpg");
+  background-image: url("/../../images/restaurants/stil.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper-title--lapalette {
-  background-image: url("/images/restaurants/jay-wennington.jpg");
+  background-image: url("/../../images/restaurants/jay-wennington.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .wrapper-title--ledelice {
-  background-image: url("/images/restaurants/louis-hansel.jpg");
+  background-image: url("/../../images/restaurants/louis-hansel.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -115,11 +115,17 @@ a {
   color: transparent;
 }
 
+.wrapper-title__content > .favorite .far {
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
 .wrapper-title__content > .favorite:hover .fas {
   opacity: 1;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .wrapper-title__content > .favorite:hover .far {
@@ -360,22 +366,22 @@ body {
 
 @media screen and (min-width: 768px) {
   .main--alafr {
-    background-image: url("/images/restaurants/toa-heftiba.jpg");
+    background-image: url("/../../images/restaurants/toa-heftiba.jpg");
     background-size: cover;
     background-position: center;
   }
   .main--lanote {
-    background-image: url("/images/restaurants/stil.jpg");
+    background-image: url("/../../images/restaurants/stil.jpg");
     background-size: cover;
     background-position: center;
   }
   .main--lapalette {
-    background-image: url("/images/restaurants/jay-wennington.jpg");
+    background-image: url("/../../images/restaurants/jay-wennington.jpg");
     background-size: cover;
     background-position: center;
   }
   .main--ledelice {
-    background-image: url("/images/restaurants/louis-hansel.jpg");
+    background-image: url("/../../images/restaurants/louis-hansel.jpg");
     background-size: cover;
     background-position: center;
   }
