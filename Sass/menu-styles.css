@@ -228,15 +228,9 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
   box-shadow: 0px 5px 8px 1px #e7e7e7;
   -webkit-box-shadow: 0px 5px 8px 1px #e7e7e7;
   -moz-box-shadow: 0px 5px 8px 1px #e7e7e7;
-}
-
-.menu__dish-list > div {
-  margin: 0px 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -253,6 +247,23 @@ a {
   }
 }
 
+.menu__dish-list__content {
+  margin: 0px 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu__dish-list__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu__dish-list__content:hover + .price {
+  -webkit-transform: translate(100px 0px);
+          transform: translate(100px 0px);
+}
+
 .menu__dish-list .price {
   height: 100%;
   width: 100px;
@@ -265,23 +276,69 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: translateX 2s linear backwards;
-          animation: translateX 2s linear backwards;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
-.menu__dish-list .price:hover {
-  -webkit-transform: translateX(-15px, 2s) 2s;
-          transform: translateX(-15px, 2s) 2s;
+.menu__dish-list .price p {
+  width: 50px;
+  text-align: center;
 }
 
-.menu__dish-list .price:hover ::after {
-  display: inline-block;
-  content: " v ";
-  color: white;
-  border: solid 1px black;
+.menu__dish-list .price span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
   height: 60px;
-  width: 70px;
+  color: white;
+  font-size: 1.5rem;
   background-color: #99E2D0;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+@-webkit-keyframes translateX {
+  from {
+    display: none;
+  }
+  to {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+}
+
+@keyframes translateX {
+  from {
+    display: none;
+  }
+  to {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 /*--------------------Footer--------------------*/
@@ -431,85 +488,93 @@ main > .call-to-action:hover {
 }
 
 .vignets--1 {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.vignets--2 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.vignets--3 {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-
-.vignets__list {
-  -webkit-animation: transition .4s linear 1 normal both;
-          animation: transition .4s linear 1 normal both;
-}
-
-.vignets__list--1 {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.vignets__list--2 {
+.vignets--2 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.vignets__list--3 {
+.vignets--3 {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
 
+.vignets__list {
+  -webkit-animation: transition .3s linear 1 normal both;
+          animation: transition .3s linear 1 normal both;
+}
+
+.vignets__list--1 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.vignets__list--2 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.vignets__list--3 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
 .vignets__list--4 {
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .vignets__list--5 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .vignets__list--6 {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.vignets__list--7 {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+
+.vignets__list--8 {
   -webkit-animation-delay: 2.4s;
           animation-delay: 2.4s;
 }
 
-.vignets__list--7 {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
-}
-
-.vignets__list--8 {
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
-}
-
 .vignets__list--9 {
-  -webkit-animation-delay: 3.6s;
-          animation-delay: 3.6s;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
 }
 
 @-webkit-keyframes transition {
   from {
     opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
 @keyframes transition {
   from {
     opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 /*# sourceMappingURL=menu-styles.css.map */

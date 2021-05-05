@@ -38,24 +38,26 @@ main>.call-to-action{
     animation: transition 2s linear 1 normal both;
     @for $i from 1 through 3 {
         &--#{$i}{
-            animation-delay: .5s*$i;
+            animation-delay: .4s*$i;
         }
     }
 }
 .vignets__list{
-    animation: transition .4s linear 1 normal both;
+    animation: transition .3s linear 1 normal both;
     @for $i from 1 through 9 {
         &--#{$i}{
-            animation-delay: .4s*$i;
+            animation-delay: .3s*$i;
         }
     }
 }
 @keyframes transition {
     from {
         opacity:0;
+        transform: translateY(10px);
     }
     to {
         opacity:1;
+        transform: translateY(0px);
     }
 }
 @-moz-keyframes transition { /* sur Firefox */
