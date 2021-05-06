@@ -1,5 +1,6 @@
 .menu{
-    max-width: 95%;
+    width: 95%;
+    max-width: 500px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -30,7 +31,7 @@
         }
     }
     &__dish-list{
-        max-width: 100%;
+        width: 100%;
         height: 60px;
         border-radius: 15px;
         background-color: #ffffff;
@@ -38,54 +39,69 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        cursor: pointer;
         @include button-shadow;
         @media screen and (min-width:768px) {
             width: 95%;
             margin: 5px auto;
             @include container-shadow;
         }
-        
+        overflow: hidden;
         &__content{
-            margin: 0px 15px;
+            margin-left: 15px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            cursor: pointer;
             & p {
             overflow: hidden;
             text-overflow: ellipsis;
             }
             &:hover + .price {
-                transform: translate(100px 0px);
+                transform: translateX(0%);
+                & > span > i {
+                    transform: rotate(0deg);
+                }
             }
         }
         .price{
             height: 100%;
-            width: 100px;
+            max-width: 20%;
             @include flex-center;
             flex-direction: row;
             flex-wrap: nowrap;
             & p {
-                width: 50px;
+                width: 50%;
                 text-align: center;
+                padding: 0px 10px;
             }
             & span {
                 @include flex-center;
-                width: 50px;
+                width: 50%;
                 height: 60px;
                 color: white;
                 font-size: 1.5rem;
                 background-color: $color-tertiary;
-                transition: transform 2s;
+                padding: 0px 10px;
+                & i {
+                    transform: rotate(-360deg);
+                    transition: transform .5s ease-in-out;
+                }
             }
+            transform: translateX(50%);   
+            transition: all .4s;
         }
     }
 }
-@keyframes translateX{
+/*@keyframes translateX{
     from {
-        display: none;
+        transform: translateX(-50%);
     }
     to {
-        @include flex-center;
+        transform: translateX(0px);
     }
-}
+}*/

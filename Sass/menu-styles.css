@@ -155,7 +155,8 @@ a {
 }
 
 .menu {
-  max-width: 95%;
+  width: 95%;
+  max-width: 500px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -213,7 +214,7 @@ a {
 }
 
 .menu__dish-list {
-  max-width: 100%;
+  width: 100%;
   height: 60px;
   border-radius: 15px;
   background-color: #ffffff;
@@ -227,10 +228,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: pointer;
   box-shadow: 0px 5px 8px 1px #e7e7e7;
   -webkit-box-shadow: 0px 5px 8px 1px #e7e7e7;
   -moz-box-shadow: 0px 5px 8px 1px #e7e7e7;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -248,10 +249,23 @@ a {
 }
 
 .menu__dish-list__content {
-  margin: 0px 15px;
+  margin-left: 15px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .menu__dish-list__content p {
@@ -260,13 +274,18 @@ a {
 }
 
 .menu__dish-list__content:hover + .price {
-  -webkit-transform: translate(100px 0px);
-          transform: translate(100px 0px);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.menu__dish-list__content:hover + .price > span > i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .menu__dish-list .price {
   height: 100%;
-  width: 100px;
+  max-width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,11 +301,16 @@ a {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .menu__dish-list .price p {
-  width: 50px;
+  width: 50%;
   text-align: center;
+  padding: 0px 10px;
 }
 
 .menu__dish-list .price span {
@@ -299,48 +323,31 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50px;
+  width: 50%;
   height: 60px;
   color: white;
   font-size: 1.5rem;
   background-color: #99E2D0;
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
+  padding: 0px 10px;
 }
 
-@-webkit-keyframes translateX {
-  from {
-    display: none;
-  }
-  to {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-            align-items: center;
-  }
+.menu__dish-list .price span i {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
 
-@keyframes translateX {
-  from {
-    display: none;
-  }
-  to {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
+/*@keyframes translateX{
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}*/
 /*--------------------Footer--------------------*/
 .footer {
   width: 100%;
