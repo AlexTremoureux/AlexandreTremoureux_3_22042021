@@ -76,8 +76,9 @@ form{
             }
             &:focus{
                 outline-style: none;
-                background: white;
-                z-index: 2;
+                & + i {
+                    display: none;
+                }
             }
         }
     }

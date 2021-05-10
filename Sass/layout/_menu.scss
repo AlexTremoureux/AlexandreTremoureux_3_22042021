@@ -1,6 +1,7 @@
 .menu{
     width: 95%;
     max-width: 500px;
+    
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -14,12 +15,13 @@
     }
 
     &__title{
+        
         width: 40px;
         text-transform: uppercase;
         font-size: 1rem;
         padding-bottom: 5px;
         border-bottom: 3px solid $color-tertiary;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
 
         @media screen and (min-width:768px) {
             @include container-shadow;
@@ -29,8 +31,10 @@
             align-self: center;
             background-color: lighten($color-tertiary, $amount: 10%);
         }
+        
     }
     &__dish-list{
+        
         width: 100%;
         height: 70px;
         max-height: 80px;
@@ -41,12 +45,27 @@
         align-items: center;
         justify-content: space-between;
         @include button-shadow;
+        &:hover > .price {
+            transform: translateX(0%);
+            & > span > i {
+                transform: rotate(0deg);
+            }
+        }
+        &:hover > div {
+            overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+        }
         @media screen and (min-width:768px) {
             width: 95%;
             margin: 5px auto;
             @include container-shadow;
         }
         overflow: hidden;
+        font-size: 0.9rem;
+            @media screen and (min-width:300px) {
+                font-size: 1rem;
+            }
         &__content{
             margin-left: 15px;
             width: 70%;
@@ -55,11 +74,8 @@
             flex-direction: column;
             justify-content: center;
             cursor: pointer;
-            &:hover {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            }
+            
+            
             & h4{
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -68,12 +84,6 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
-            &:hover + .price {
-                transform: translateX(0%);
-                & > span > i {
-                    transform: rotate(0deg);
-                }
-            }
         }
         .price{
             height: 100%;
@@ -81,6 +91,9 @@
             @include flex-center;
             flex-direction: row;
             flex-wrap: nowrap;
+            
+                
+           
             & p {
                 width: 50%;
                 text-align: center;

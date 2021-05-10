@@ -311,8 +311,10 @@ a {
 
 .search-map label input:focus {
   outline-style: none;
-  background: white;
-  z-index: 2;
+}
+
+.search-map label input:focus + i {
+  display: none;
 }
 
 .header-content {

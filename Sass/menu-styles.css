@@ -91,10 +91,11 @@ a {
   background-color: #f6f6f6;
   border-radius: 20px 20px 0px 0px;
   text-align: center;
+  padding: 0px 10px;
 }
 
 .wrapper-title__content > .favorite {
-  margin: 0 15px;
+  margin-left: 15px;
   font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,7 +192,7 @@ a {
   font-size: 1rem;
   padding-bottom: 5px;
   border-bottom: 3px solid #99E2D0;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -233,6 +234,23 @@ a {
   -webkit-box-shadow: 0px 5px 8px 1px #e7e7e7;
   -moz-box-shadow: 0px 5px 8px 1px #e7e7e7;
   overflow: hidden;
+  font-size: 0.9rem;
+}
+
+.menu__dish-list:hover > .price {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.menu__dish-list:hover > .price > span > i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.menu__dish-list:hover > div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media screen and (min-width: 768px) {
@@ -246,6 +264,12 @@ a {
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .menu__dish-list {
+    font-size: 1rem;
   }
 }
 
@@ -266,12 +290,6 @@ a {
   cursor: pointer;
 }
 
-.menu__dish-list__content:hover {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .menu__dish-list__content h4 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -280,16 +298,6 @@ a {
 .menu__dish-list__content p {
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.menu__dish-list__content:hover + .price {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-.menu__dish-list__content:hover + .price > span > i {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
 }
 
 .menu__dish-list .price {
