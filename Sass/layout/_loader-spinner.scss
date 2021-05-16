@@ -1,5 +1,5 @@
 /*---------___________-------////!!!-spinner-!!!\\\\-------________-----------*/
-.container-spinner{
+.container-spinner {
     font-family: 'Shrikhand', cursive;
     position: fixed;
     @include flex-center;
@@ -11,7 +11,7 @@
     & > p {
         position: fixed;
         top: 25%;
-        font-size: 4rem;
+        font-size: 3rem;
         color: $color-tertiary;
     }
 }

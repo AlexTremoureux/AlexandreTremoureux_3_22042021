@@ -1,13 +1,14 @@
-/*Mixin*/
+/*-------------Mixins--------------*/
+/*-----centrage horizontal et vertical------*/
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/*------Box-shadow------*/
 @mixin container-shadow {
     background: rgba( 255, 255, 255, 0.35 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -17,6 +18,7 @@
     -webkit-box-shadow: 0px 5px 8px 1px #e7e7e7;
     -moz-box-shadow: 0px 5px 8px 1px #e7e7e7;
 }
+/*------Bouton call-to-action--------*/
 @mixin call-to-action {
     width: 65%;
     max-width: 300px;
@@ -29,12 +31,13 @@
     justify-self: center;
     cursor: pointer;
     box-shadow: $color-primary 2px 2px 8px 2px;
-    &:hover{
+    &:hover {
         box-shadow: $color-primary 1px 1px 20px 2px;
         color: $color-tertiary;
         background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%))  ;
     }
 }
+/*-----remplissage de l'icone favorite-------*/
 @mixin favorite {
     .fas{
         position: absolute;
@@ -42,28 +45,29 @@
         transition: all .6s linear;
         color: transparent;
     }
-    .far{
+    .far {
         transition: all 1s linear;
     }
-    &:hover{
+    &:hover {
         .fas{
             opacity: 1; 
             background: linear-gradient($color-primary, $color-secondary);
             background-clip: text;
             -webkit-background-clip: text;
         }
-        .far{
+        .far {
             opacity: 0;
         }
     }
 }
+/*-------map d'assignation page menu / image puis boucle background-image------*/
 $menu:(
     alafr: '../images/restaurants/toa-heftiba.jpg',
     lanote: '../images/restaurants/stil.jpg',
     lapalette: '../images/restaurants/jay-wennington.jpg',
     ledelice: '../images/restaurants/louis-hansel.jpg'
 );
-@mixin background-image($selector){
+@mixin background-image($selector) {
     @each $selector, $img in $menu {
         &--#{$selector}{
             background-image: url($img);

@@ -1,11 +1,12 @@
-.wrapper-title{
+/*---------Titre et background-image des pages menus des différents restautants-------*/
+.wrapper-title {
     max-width: 100%;
     height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     @include background-image(alafr);
-    &__content{
+    &__content {
         max-height: 80px;
         max-width: 100%;
         @include flex-center;
@@ -23,7 +24,6 @@
         @media screen and (min-width:768px) {
             background: rgba( 255, 255, 255, 0.80 );
             box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-            backdrop-filter: blur( 4px );
             -webkit-backdrop-filter: blur( 4px );
             border-radius: 10px;
             border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -36,5 +36,4 @@
         margin: auto;
         background: transparent;
     }
-    
 }

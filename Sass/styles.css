@@ -1,7 +1,12 @@
 @charset "UTF-8";
 /*---------------styles.scss__by__Alex-TREMOUREUX__-----------------*/
 /*Variables*/
-/*Mixin*/
+/*-------------Mixins--------------*/
+/*-----centrage horizontal et vertical------*/
+/*------Box-shadow------*/
+/*------Bouton call-to-action--------*/
+/*-----remplissage de l'icone favorite-------*/
+/*-------map d'assignation page menu / image puis boucle background-image------*/
 /*------mini reset--------*/
 * {
   margin: 0rem;
@@ -45,7 +50,7 @@ a {
 .container-spinner > p {
   position: fixed;
   top: 25%;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #99E2D0;
 }
 
@@ -161,7 +166,7 @@ a {
   }
 }
 
-/*----------Header-----------*/
+/*----------Header de la page d'accueil-----------*/
 @media screen and (min-width: 1024px) {
   header {
     position: fixed;
@@ -176,7 +181,7 @@ a {
             flex-flow: column wrap;
     height: 255px;
     width: 100%;
-    background: conic-gradient(from 300deg at 0% 60%, #9356dc, #9657dc, #9f58dc, #ab5adc, #b95edc, #c862dc, #d666db, #e46cdb, #ef71db, #f775da, #fd78da, #ff79da);
+    background: conic-gradient(from 300deg at 0%, #9356dc, #9657dc, #9f58dc, #ab5adc, #b95edc, #c862dc, #d666db, #e46cdb, #ef71db, #f775da, #fd78da, #ff79da);
   }
 }
 
@@ -216,9 +221,6 @@ a {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    -webkit-box-align: space-between;
-        -ms-flex-align: space-between;
-            align-items: space-between;
   }
 }
 
@@ -452,7 +454,7 @@ a {
   color: #9356DC;
 }
 
-.operation .--background {
+.operation .background {
   background-color: #f5edff;
 }
 
@@ -496,6 +498,7 @@ a {
   }
 }
 
+/*----------Cartes restaurants de la page d'accueil-----------*/
 .card {
   position: relative;
   width: 90%;

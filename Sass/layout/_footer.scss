@@ -1,10 +1,10 @@
 /*--------------------Footer--------------------*/
-.footer{
+.footer {
     width: 100%;
     height: 180px;
     background-color: #353535;
     color: #ffffff;
-    @media screen and (min-width:1024px){
+    @media screen and (min-width:1024px) {
         height: 120px;   
     }
     &__title {
@@ -12,9 +12,9 @@
         padding: 20px 30px 5px;
         font-family: 'Shrikhand', cursive;
     }
-    &__link > li{
+    &__link > li {
         margin: 5px 30px;
-        @media screen and (min-width:1024px){
+        @media screen and (min-width:1024px) {
             width: 20%;
         }
         & > i {
@@ -26,13 +26,13 @@
             color: #ffffff;
         }
     }
-    &__link{
-        @media screen and (min-width:1024px){
+    &__link {
+        @media screen and (min-width:1024px) {
             display: flex;
             flex-direction: row;       
         }
     }
-    @media screen and (min-width:768px){
+    @media screen and (min-width:768px) {
         text-align:center;
     }
 }

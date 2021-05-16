@@ -1,4 +1,5 @@
-.card{
+/*----------Cartes restaurants de la page d'accueil-----------*/
+.card {
     position: relative;
     width: 90%;
     height: 20%;
@@ -6,7 +7,7 @@
     background-color: #ffffff;
     border-radius: 15px;
     @include button-shadow;
-    &--new::after{
+    &--new::after {
         content: "Nouveau";
         position: absolute;
         top: 10px;
@@ -30,9 +31,8 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        &:hover{
+        &:hover {
             box-shadow:  9px 9px 17px #a5a5a5;
-            
         }
         @media screen and (min-width:1024px) {
             flex-flow: column wrap;
@@ -41,7 +41,7 @@
             background: linear-gradient(145deg, #ffffff, #dddddd);
             box-shadow:  9px 9px 17px #a5a5a5,
              -9px -9px 17px #ffffff;
-             &:hover{
+             &:hover {
                 border-radius: 15px;
                 background: #f6f6f6;
                 box-shadow: inset 9px 9px 17px #a5a5a5,
@@ -59,14 +59,14 @@
                 border-radius: 15px 0px 0px 15px;
             }
         }
-        &__content{
+        &__content {
             height: 30%;
             width: 60%;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             padding-left: 20px;
-            &>h4{
+            &>h4 {
                 font-weight: bold;
                 font-size: 1.2rem;
             }

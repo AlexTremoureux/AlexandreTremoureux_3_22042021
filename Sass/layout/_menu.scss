@@ -1,28 +1,24 @@
-.menu{
+/*--------Sections entrée/plats/desserts des pages de menus des différents restaurants--------*/
+.menu {
     width: 95%;
     max-width: 500px;
-    
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
-    @media screen and (min-width:768px){
+    @media screen and (min-width:768px) {
         width: 60%;
         max-width: 800px;
         padding: 10px 0px;
         @include container-shadow;
     }
-
-    &__title{
-        
+    &__title {
         width: 40px;
         text-transform: uppercase;
         font-size: 1rem;
         padding-bottom: 5px;
         border-bottom: 3px solid $color-tertiary;
         margin-bottom: 5px;
-
         @media screen and (min-width:768px) {
             @include container-shadow;
             width: 90px;
@@ -31,10 +27,8 @@
             align-self: center;
             background-color: lighten($color-tertiary, $amount: 10%);
         }
-        
     }
-    &__dish-list{
-        
+    &__dish-list {
         width: 100%;
         height: 70px;
         max-height: 80px;
@@ -46,6 +40,11 @@
         justify-content: space-between;
         @include button-shadow;
         cursor: pointer;
+        overflow: hidden;
+        font-size: 0.9rem;
+            @media screen and (min-width:300px) {
+                font-size: 1rem;
+            }
         &:hover > .price {
             transform: translateX(0%);
             & > span > i {
@@ -54,10 +53,10 @@
         }
         &:hover > div {
             overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
-        &:active{
+        &:active {
             background-color: $color-map;
         }
         @media screen and (min-width:768px) {
@@ -65,19 +64,14 @@
             margin: 5px auto;
             @include container-shadow;
         }
-        overflow: hidden;
-        font-size: 0.9rem;
-            @media screen and (min-width:300px) {
-                font-size: 1rem;
-            }
-        &__content{
+        &__content {
             margin-left: 15px;
             width: 70%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            & h4{
+            & h4 {
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
@@ -86,19 +80,19 @@
                 text-overflow: ellipsis;
             }
         }
-        .price{
+        .price {
             height: 100%;
             width: 30%;
             @include flex-center;
             flex-direction: row;
             flex-wrap: nowrap;
-            
-                
-           
+            transform: translateX(50%);   
+            transition: all 500ms;
             & p {
                 width: 50%;
                 text-align: center;
                 padding: 0px 10px;
+                font-weight: bold;
             }
             & span {
                 @include flex-center;
@@ -110,11 +104,9 @@
                 padding: 0px 10px;
                 & i {
                     transform: rotate(-360deg);
-                    transition: transform .5s ease-in-out;
+                    transition: transform 500ms ease-in-out;
                 }
             }
-            transform: translateX(50%);   
-            transition: all .4s;
         }
     }
 }

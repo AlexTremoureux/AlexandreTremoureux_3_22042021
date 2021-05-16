@@ -1,6 +1,12 @@
+@charset "UTF-8";
 /*---------------menu-styles.scss__by__Alex-TREMOUREUX__-----------------*/
 /*Variables*/
-/*Mixin*/
+/*-------------Mixins--------------*/
+/*-----centrage horizontal et vertical------*/
+/*------Box-shadow------*/
+/*------Bouton call-to-action--------*/
+/*-----remplissage de l'icone favorite-------*/
+/*-------map d'assignation page menu / image puis boucle background-image------*/
 /*------mini reset--------*/
 * {
   margin: 0rem;
@@ -17,6 +23,7 @@ a {
   color: #141414;
 }
 
+/*------Header des pages menu des différents restaurants------*/
 .header {
   position: relative;
   height: 60px;
@@ -36,6 +43,7 @@ a {
   left: 5%;
 }
 
+/*---------Titre et background-image des pages menus des différents restautants-------*/
 .wrapper-title {
   max-width: 100%;
   height: 250px;
@@ -138,7 +146,6 @@ a {
     background: rgba(255, 255, 255, 0.8);
     -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -155,6 +162,7 @@ a {
   }
 }
 
+/*--------Sections entrée/plats/desserts des pages de menus des différents restaurants--------*/
 .menu {
   width: 95%;
   max-width: 500px;
@@ -179,7 +187,6 @@ a {
     background: rgba(255, 255, 255, 0.35);
     -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -200,7 +207,6 @@ a {
     background: rgba(255, 255, 255, 0.35);
     -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -238,6 +244,12 @@ a {
   font-size: 0.9rem;
 }
 
+@media screen and (min-width: 300px) {
+  .menu__dish-list {
+    font-size: 1rem;
+  }
+}
+
 .menu__dish-list:hover > .price {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
@@ -265,16 +277,9 @@ a {
     background: rgba(255, 255, 255, 0.35);
     -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-  }
-}
-
-@media screen and (min-width: 300px) {
-  .menu__dish-list {
-    font-size: 1rem;
   }
 }
 
@@ -324,14 +329,15 @@ a {
       flex-wrap: nowrap;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .menu__dish-list .price p {
   width: 50%;
   text-align: center;
   padding: 0px 10px;
+  font-weight: bold;
 }
 
 .menu__dish-list .price span {
@@ -355,10 +361,10 @@ a {
 .menu__dish-list .price span i {
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
-  -webkit-transition: -webkit-transform .5s ease-in-out;
-  transition: -webkit-transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 /*--------------------Footer--------------------*/
