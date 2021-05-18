@@ -20,6 +20,7 @@
             font-size: 1.2rem;
             @include flex-center;
             @include favorite;
+            cursor: pointer;
         }
         @media screen and (min-width:768px) {
             background: rgba( 255, 255, 255, 0.80 );

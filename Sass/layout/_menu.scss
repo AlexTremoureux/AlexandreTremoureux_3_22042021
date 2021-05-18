@@ -51,7 +51,7 @@
                 transform: rotate(0deg);
             }
         }
-        &:hover > div {
+        &:hover > .menu__dish-list__content {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;

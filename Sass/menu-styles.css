@@ -114,6 +114,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .wrapper-title__content > .favorite .fas {
@@ -260,7 +261,7 @@ a {
           transform: rotate(0deg);
 }
 
-.menu__dish-list:hover > div {
+.menu__dish-list:hover > .menu__dish-list__content {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
